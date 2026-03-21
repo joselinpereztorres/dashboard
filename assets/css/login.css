@@ -1,0 +1,485 @@
+/* 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+.login{
+    width: 100%;
+    height: 100dvh;
+    min-height: 100vh;              
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #012030;
+}
+
+.login__interface{
+    max-width: 110rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    overflow: hidden;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    box-shadow: 1rem #9dabb3;
+}
+.login__welcome{
+    flex: 1 1 70rem;
+    min-width: 0;
+    position: relative;
+
+    height: 50rem;
+}
+.login__welcome img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit:fill;
+}
+
+.login__info{
+    position: absolute;
+    width: 30rem;
+    bottom: 5rem;
+    right: 5rem;
+   
+}
+
+.login__info h1{
+    font-size: 5rem;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.login__info p{
+    font-size: 1.4rem;
+    text-align: right;
+}
+
+.login__user{
+    flex: 1 1 40rem;
+    min-width: 0;
+    background-color:#ffffff;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+
+.login__information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.login__information i{
+    font-size: 7rem;
+    color: #012030;
+}
+
+
+
+.login__form{
+    width: 100%;
+    margin-top: 3rem;
+}
+.login__question{
+    display: flex;
+    align-items: center;
+    border: 1px solid #012030;
+    margin-bottom: 2.5rem;
+    padding-left: 2rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.login__question i{
+    font-size: 1.5rem;
+}
+.login__question input{
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1rem;
+    font-size: 1.6rem;
+    outline: none;
+}
+
+.login__check{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.login__check label{
+    font-size: 1.2rem;
+}
+.login__button{
+    background-color:#012030;
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    border: #012030;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    color: white;
+    text-transform:uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.login__button:hover{
+    background-color: #13678A;
+}
+
+
+@media (max-width: 768px) {
+    .login__interface{
+        height: 90dvh;
+        flex-wrap: wrap;
+        background-color: rebeccapurple;
+    }
+    .login__user{
+   
+        padding: 2rem;
+        flex: 1 1 40rem;
+        min-width: 40rem;
+    
+    }
+
+
+    .login__info h1{
+        font-size: 4rem;
+        text-align: right;
+        margin-bottom: 2rem;
+    }
+
+    .login__welcome{
+        flex: 1 1 40rem;
+        min-width: 40rem;
+    }
+
+}
+
+/* @media (max-width: 468px) {
+    
+   .login__user{
+        order: 1;
+        height: 60%;
+        min-width: 30rem;
+    }
+    .login__welcome{
+        height: 40%;
+        min-width: 30rem;
+    
+    }
+    .login__info{
+        position: absolute;
+        width: 100%;
+        padding: 1rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+       
+    }
+
+    .login__info h1,.login__info p{
+      
+        text-align: center;
+   
+    }
+
+}  
+
+@media (max-width: 468px) {
+
+  
+  .login{
+    height: 100dvh;   
+  }
+
+  .login__user{
+    order: 1;
+    height: 60%;
+    min-width: 30rem;
+    width: 100%;      
+  }
+
+  .login__welcome{
+    height: 40%;
+    min-width: 30rem;
+    width: 100%;      
+    position: relative; 
+    overflow: hidden; 
+  }
+
+  .login__welcome img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .login__info{
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .login__info h1,
+  .login__info p{
+    text-align: center;
+  }
+} */
+
+/* ✅ MISMO DISEÑO / MISMO ASPECTO
+   ✅ YA NO DEPENDE de ningún font-size raíz (rem/em)
+   ✅ Solo se cambiaron tamaños: rem -> px (asumiendo tu escala original: 1rem = 10px)
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+.login{
+    width: 100%;
+    height: 100dvh;
+    min-height: 100vh;              
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #012030;
+}
+
+.login__interface{
+    max-width: 1100px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    box-shadow: 10px #9dabb3;
+}
+
+.login__welcome{
+    flex: 1 1 700px;
+    min-width: 0;
+    position: relative;
+    height: 500px;
+}
+
+.login__welcome img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: fill;
+}
+
+.login__info{
+    position: absolute;
+    width: 300px;
+    bottom: 50px;
+    right: 50px;
+}
+
+.login__info h1{
+    font-size: 50px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.login__info p{
+    font-size: 14px;
+    text-align: right;
+}
+
+.login__user{
+    flex: 1 1 400px;
+    min-width: 0;
+    background-color:#ffffff;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login__information i{
+    font-size: 70px;
+    color: #012030;
+}
+
+.login__form{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.login__question{
+    display: flex;
+    align-items: center;
+    border: 1px solid #012030;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.login__question i{
+    font-size: 15px;
+}
+
+.login__question input{
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.login__check{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.login__check label{
+    font-size: 12px;
+}
+
+.login__button{
+    background-color:#012030;
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: #012030;
+    font-size: 14px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: white;
+    text-transform:uppercase;
+    letter-spacing: 5px;
+}
+
+.login__button:hover{
+    background-color: #13678A;
+}
+
+@media (max-width: 768px) {
+    .login__interface{
+        height: 90dvh;
+        flex-wrap: wrap;
+        background-color: rebeccapurple;
+    }
+
+    .login__user{
+        padding: 20px;
+        flex: 1 1 400px;
+        min-width: 400px;
+    }
+
+    .login__info h1{
+        font-size: 40px;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+
+    .login__welcome{
+        flex: 1 1 400px;
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 468px) {
+
+  .login{
+    height: 100dvh;
+  }
+
+  .login__user{
+    order: 1;
+    height: 60%;
+    min-width: 300px;
+    width: 100%;
+  }
+
+  .login__welcome{
+    height: 40%;
+    min-width: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .login__welcome img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .login__info{
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .login__info h1,
+  .login__info p{
+    text-align: center;
+  }
+}

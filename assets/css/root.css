@@ -1,0 +1,33 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+}
+
+:root {
+  --color-principal:(#012030);
+  --color-secundario:(#13678A);
+  --color-terciario:(#45C4B0);
+  --color-light:(#9AEBA3);
+  --color-exlight:(#DAFDBA);
+
+}
+.bg-principal {
+    background-color: var(--color-principal);
+}
+.bg-secundario {
+    background-color: var(--color-secundario);
+}
+.bg-terciario {
+    background-color: var(--color-terciario);
+}
+.bg-Light {
+    background-color: var(--color-light);
+}
+.bg-elight {
+    background-color: var(--color-exlight);
+}

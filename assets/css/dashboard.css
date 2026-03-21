@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Noto+Sans+JP:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sirivennela&display=swap");
+
+/* 
+
+.dash {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.sidebar {
+   width: 25rem;
+   background-color: rgb(235, 235, 235);
+   min-height: 100dvh;
+   display: flex;
+   flex-direction: column;
+   border-right: 2px solid rgb(236, 234, 234);
+   transition: 0.3s ease-in-out;
+   -webkit-transition: 0.3s ease-in-out;
+   -moz-transition: 0.3s ease-in-out;
+   -ms-transition: 0.3s ease-in-out;
+   -o-transition: 0.3s ease-in-out;
+}
+
+
+.sidebar__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7.5rem;
+  padding: 1rem;
+  background-color: #012030;
+  color: white;
+}
+
+.sidebar__menu h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.sidebar__menu button {
+  background-color: transparent;
+  border: none;
+  
+}
+
+.sidebar__menu button i {
+  font-size: 4rem;
+  color: white;
+}
+
+.sidebar__modulos {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__modulos a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem 2rem;
+}
+
+.sidebar__modulos span {
+  font-size: 1.5rem;
+}
+
+.sidebar__modulos i {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+.sidebar__btn {
+  width: 18rem;
+  margin-top: 2rem;
+  display: flex;
+  align-self: center;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  justify-content: center;
+  border: 1px solid rgb(179, 176, 176);
+}
+.sidebar__modulos a:hover,
+.sidebar__btn:hover {
+  background-color: #13678A;
+}
+
+.sidebar--hide {
+  width: 7.5rem;
+  transition: 0.2s ease-in-out;
+
+}
+
+.dash--hide {
+  display: none;
+}
+
+
+
+.dash__main.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  height: 7.5rem;
+  justify-content: space-between;
+  padding: 0 3rem;
+  position: static;
+  align-items: center;
+  border-bottom: 2px solid rgb(236, 234, 234);
+}
+
+.nav__principal h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.nav__usuario {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav__datos {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+
+.nav__datos p:first-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+.nav__datos p:nth-child(2) {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+.nav__img {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 5rem;
+}
+.nav__img i {
+  font-size: 5rem;
+}
+.nav__logout a i{
+  font-size: 2.5rem;
+ 
+}
+
+
+.dash__contenido {
+  width: 100%;
+  min-height: calc(100dvh - 7.5rem);
+  background-color: rgb(255, 249, 249);
+}
+
+
+
+@media (max-width: 768px) {
+ 
+
+  .nav {
+    justify-content: flex-end;
+  }
+  .nav__usuario {
+    gap: 1.5rem;
+  }
+  .nav__principal {
+    display: none;
+  }
+
+  .nav__datos p:first-child {
+    font-size: 1.4rem;
+  }
+
+  .nav__datos p:nth-child(2) {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+ 
+}
+
+@media (max-width: 468px) {
+  .sidebar {
+    position: absolute;
+  }
+
+  .sidebar__menu {
+    height: 5.5rem;
+  }
+
+  .sidebar__modulos i {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+
+  .sidebar--hide {
+    width: 6rem;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+  }
+  .nav {
+    height: 5.5rem;
+  }
+
+  .nav__img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 3.5rem;
+  }
+  .nav__logout i {
+    font-size: 2rem;
+  }
+} */
+
+
+/* ✅ MISMO DISEÑO / MISMO ASPECTO
+   ✅ NO DEPENDE de font-size (ya no hay rem)
+   ✅ Solo se convirtieron medidas: rem -> px
+   Asumiendo tu escala original: 1rem = 10px
+*/
+
+.dash {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.sidebar {
+   width: 250px;
+   background-color: rgb(235, 235, 235);
+   min-height: 100dvh;
+   display: flex;
+   flex-direction: column;
+   border-right: 2px solid rgb(236, 234, 234);
+   transition: 0.3s ease-in-out;
+   -webkit-transition: 0.3s ease-in-out;
+   -moz-transition: 0.3s ease-in-out;
+   -ms-transition: 0.3s ease-in-out;
+   -o-transition: 0.3s ease-in-out;
+}
+
+.sidebar__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding: 10px;
+  background-color: #012030;
+  color: white;
+}
+
+.sidebar__menu h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sidebar__menu button {
+  background-color: transparent;
+  border: none;
+}
+
+.sidebar__menu button i {
+  font-size: 40px;
+  color: white;
+}
+
+.sidebar__modulos {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__modulos a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.sidebar__modulos span {
+  font-size: 15px;
+}
+
+.sidebar__modulos i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.sidebar__btn {
+  width: 180px;
+  margin-top: 20px;
+  display: flex;
+  align-self: center;
+  font-size: 13px;
+  border-radius: 10px;
+  padding: 5px;
+  justify-content: center;
+  border: 1px solid rgb(179, 176, 176);
+}
+
+.sidebar__modulos a:hover,
+.sidebar__btn:hover {
+  background-color: #13678A;
+}
+
+.sidebar--hide {
+  width: 75px;
+  transition: 0.2s ease-in-out;
+}
+
+.dash--hide {
+  display: none;
+}
+
+/*navbar*/
+
+.dash__main.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  height: 75px;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: static;
+  align-items: center;
+  border-bottom: 2px solid rgb(236, 234, 234);
+}
+
+.nav__principal h1 {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.nav__usuario {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav__datos {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+
+.nav__datos p:first-child {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.nav__datos p:nth-child(2) {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.nav__img {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 50px;
+}
+
+.nav__img i {
+  font-size: 50px;
+}
+
+.nav__logout a i{
+  font-size: 20px;
+}
+
+/*contenido*/
+.dash__contenido {
+  width: 100%;
+  min-height: calc(100dvh - 75px);
+  background-color: rgb(255, 249, 249);
+}
+
+/*mediaquery 768px*/
+@media (max-width: 768px) {
+
+  .nav {
+    justify-content: flex-end;
+  }
+
+  .nav__usuario {
+    gap: 15px;
+  }
+
+  .nav__principal {
+    display: none;
+  }
+
+  .nav__datos p:first-child {
+    font-size: 14px;
+  }
+
+  .nav__datos p:nth-child(2) {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 468px) {
+  .sidebar {
+    position: absolute;
+  }
+
+  .sidebar__menu {
+    height: 55px;
+  }
+
+  .sidebar__modulos i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .sidebar--hide {
+    width: 60px;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+  }
+
+  .nav {
+    height: 55px;
+  }
+
+  .nav__img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 35px;
+  }
+
+  .nav__logout i {
+    font-size: 20px;
+  }
+}
+
+
