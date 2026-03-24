@@ -87,4 +87,5 @@ El script de base de datos se encuentra en:
 https://github.com/joselinpereztorres/dashboard.git
 
 ## Diagrama base de datos 
+El archivo `laboratorio.sql` contiene la estructura y datos de prueba necesarios para ejecutar el proyecto.
 <img width="869" height="720" alt="Captura de pantalla 2026-03-21 203449" src="https://github.com/user-attachments/assets/9b56a6a6-25bf-4b73-aab0-f3d56e0343d4" />
