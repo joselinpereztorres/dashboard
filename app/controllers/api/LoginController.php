@@ -28,6 +28,12 @@
             return;
         }
 
+        if(!$usuario || !password_verify($data['password'], $usuario['password'])){
+            echo json_encode([
+                "status"=>401,
+                "error"=>"Credenciales inválidas"]);
+            return;
+        }
         $payload = [
             "iat" => time(),
             "exp" => time() + (60 * 60), 
