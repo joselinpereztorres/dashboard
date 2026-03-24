@@ -8,8 +8,6 @@ class DynamicController extends Controller {
 
         header('Content-Type: application/json');
 
-        $usuario = AuthApi::validar();
-
         $data = json_decode(file_get_contents("php://input"), true);
         $tabla = $data['tabla'] ?? null;
 

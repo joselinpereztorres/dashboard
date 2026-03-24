@@ -73,7 +73,11 @@ error_reporting(E_ALL);
   
 
   
-    <?php  include "app/views/components/modals/modal.php";?>
+    <?php  
+        include "app/views/components/modals/modal.php";
+        include "app/views/components/modals/modalResultado.php";
+    
+    ?>
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

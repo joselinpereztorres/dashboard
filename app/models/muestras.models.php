@@ -94,6 +94,56 @@
         
     }
 
+    public static function addResultado($id_muestra, $resultado , $fecha, $observaciones , $id_usuario){
+
+        $stmt = InstallModel::conexion()->prepare(
+            "INSERT into resultados (id_muestra, resultado, fecha, observaciones, id_usuario) VALUES (?, ?, ?, ?, ?)");
+
+        return $stmt->execute([
+            $id_muestra, $resultado , $fecha, $observaciones , $id_usuario
+        ]);
+
+    }
+
+    //    public static function mostrarMuestrasPaginadas($pagina = 1, $limite = 5){
+
+    //     $offset = ($pagina - 1) * $limite;
+
+    //     $stmt = InstallModel::conexion()->prepare("
+    //         SELECT 
+    //             m.id_muestra,
+    //             m.codigo,
+    //             m.fecha_recibo,
+    //             m.prioridad,
+    //             m.status,
+    //             m.horas_estimadas,
+    //             p.nombre AS proyecto,
+    //             c.nombre AS cliente,
+    //             COALESCE(r.resultado, 'Sin resultado') AS resultado
+    //         FROM muestras m
+    //         INNER JOIN proyectos p ON m.id_proyecto = p.id_proyecto
+    //         INNER JOIN clientes c ON p.id_cliente = c.id_cliente
+    //         LEFT JOIN resultados r ON m.id_muestra = r.id_muestra
+    //         ORDER BY m.id_muestra DESC
+    //         LIMIT :limite OFFSET :offset
+    //     ");
+
+    //     $stmt->bindValue(':limite', (int)$limite, PDO::PARAM_INT);
+    //     $stmt->bindValue(':offset', (int)$offset, PDO::PARAM_INT);
+    //     $stmt->execute();
+
+    //     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // }
+
+    // public static function totalMuestras(){
+
+    //     $stmt = InstallModel::conexion()->prepare("SELECT COUNT(*) AS total FROM muestras");
+    //     $stmt->execute();
+
+    //     return $stmt->fetch(PDO::FETCH_ASSOC);
+    // }
+
+    
 
 }
 ?>

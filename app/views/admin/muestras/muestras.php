@@ -18,56 +18,7 @@
     </div>
 
     <div>
-        <nav class="navbar navbar-light  my-3 mx-0">
-            <div class="container-fluid ">
-                <form action=""  class="w-100">
-                    <div class="container m-0 p-0 w-100">
-                        <div class="row">
-                    
-                            <div class="col-md-3">
-                                
-                                <div class="input-group ">
-                                    <span class="input-group-text">
-                                        <i class="bi bi-search"></i>
-                                    </span>
-                                    <input type="search" class="form-control" placeholder="Buscar servicio">
-                                </div>
-                                
-                            </div>
-                            <div class="col-md-3">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Categoria</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                            </select>
-                                
-                                
-                            </div>
-                            <div class="col-md-3">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Estado</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                                
-                                
-                            </div>
-                            
-                            <div class="col-md-3 d-flex justify-content-end gap-4 ">
-                                <button class="btn btn-primary px-5" type="submit">Buscar</button>
-                            
-                            </div>
-
-                        </div>
-                    
-                    </div>
-                </form>
-                
-                
-            </div>
-        </nav>
+       
 
         <div class="table-responsive">
             <table class="table align-middle table table-borderless">
@@ -113,6 +64,7 @@
 
                             <td class="horas"></td>
                             <td><span class="badge text-bg-primary status text-capitalize"></span></td>
+
                             <td class="resultado"></td>
                             <td>
                                 <div class="d-flex justify-content-center align-items-center gap-3">
@@ -135,23 +87,9 @@
             </table>
 
 
-            <nav class="d-flex justify-content-center " aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                    </li>
-                </ul>
-                </nav>
+            <!-- <nav class="d-flex justify-content-center" aria-label="Page navigation example">
+                <ul class="pagination" id="paginacionMuestras"></ul>
+            </nav> -->
         </div>
     </div>
 </div>

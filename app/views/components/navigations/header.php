@@ -1,6 +1,6 @@
 <nav class="dash__nav nav">
     <div class="nav__principal">
-        <h1>lkm</h1>
+        <h1>Laboratorio</h1>
     </div>
     <div class="nav__usuario">
         <div class="nav__datos">

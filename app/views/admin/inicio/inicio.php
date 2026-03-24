@@ -55,3 +55,6 @@
 
   </div>
 </div>
+
+
+<script type="module" src="/public/assets/js/inicio.js"></script>

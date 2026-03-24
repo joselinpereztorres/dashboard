@@ -19,7 +19,6 @@ document.querySelector("#formLogin").addEventListener("submit", async (e) => {
         const data = await response.json();
         console.log(data);
 
-
         if (data.status == 200) {
             localStorage.setItem("token", data.token);
 
@@ -31,27 +30,31 @@ document.querySelector("#formLogin").addEventListener("submit", async (e) => {
                 body: JSON.stringify({
                     id: data.usuario.id_usuario,
                     rol: data.usuario.rol,
-                    nombre:data.usuario.nombre
+                    nombre: data.usuario.nombre
                 })
             });
 
             const sesionData = await sesionResponse.json();
 
             if (sesionData.status == 200) {
-                window.location.href = "/inicio";
+                fncSweetAlert("success", "Inicio de sesión correcto");
+
+                setTimeout(() => {
+                    window.location.href = "/inicio";
+                }, 1000);
             } else {
-             
-                fncSweetAlert(
-                    "error",
-                    "Correo o contraseña incorrecta",
-                    setTimeout(() => {
-                        window.location.href = '/login';
-                    }, 1000)
-                );
+                fncSweetAlert("error", "No se pudo crear la sesión");
+
+                setTimeout(() => {
+                    window.location.href = "/login";
+                }, 1000);
             }
+        } else {
+            fncSweetAlert("error", data.error || "Correo o contraseña incorrecta");
         }
 
     } catch (error) {
-        fncToastr("error", "Error de conexión con el servidor");   
+        console.error(error);
+        fncToastr("error", "Error de conexión con el servidor");
     }
 });

@@ -40,6 +40,65 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
 
 
+    document.addEventListener('change', async (e) => {
+
+        const input = e.target.closest('.status input');
+
+        if (!input) return;
+
+        const id_usuario = input.dataset.id;
+        const status = input.checked ? 1 : 0;
+
+        const token = localStorage.getItem("token");
+
+        try {
+            const response = await fetch(`/api/usuarios/status/${id_usuario}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify({ status })
+            });
+
+            const result = await response.text();
+
+           if (result.status == 200) {
+                    fncSweetAlert(
+                        "success",
+                        "Registro creado correctamente",
+                        setTimeout(() => {
+                            window.location.href = `/usuarios`;
+                        }, 1000)
+                    );
+                }
+                else if (result.status == 400) {
+                    fncSweetAlert(
+                        "error",
+                        "Todos los campos son obligatorios",
+                        setTimeout(() => {
+                            window.location.href = `/usuarios`;
+                        }, 1000)
+                    );
+                }
+                else if (result.status == 500) {
+                    fncSweetAlert(
+                        "error",
+                        "No se pudo registrar",
+                        setTimeout(() => {
+                            window.location.href = `/usuarios`;
+                        }, 1000)
+                    );
+                }
+                 
+        }
+
+         catch (error) {
+            console.error("Error:", error);
+            fncSweetAlert("error", "Error de conexión con el servidor");
+        }
+    });
+
     
 
 })

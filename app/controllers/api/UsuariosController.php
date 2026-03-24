@@ -134,53 +134,7 @@ require_once(__DIR__ . '/../../core/authApi.php');
             
         }
 
-        // public function editar($id){
-        //     header('Content-Type: application/json');
-        //     $validar = AuthApi::validar();
-        //     $data = json_decode(file_get_contents("php://input"), true);
-
-        //     // if(
-        //     //     !isset($data["id_cliente"]) ||
-        //     //     !isset($data["nombre"]) ||
-        //     //     !isset($data["apellidos"]) ||
-        //     //     !isset($data["correo"]) ||
-        //     //     !isset($data["rol"])
-        //     // ){
-        //     //     echo json_encode([
-        //     //         "status" => "error",
-        //     //         "message" => "Faltan datos obligatorios"
-        //     //     ]);
-        //     //     return;
-        //     // }
-
-            
-        //     $nombre = $data["nombre"];
-        //     $apellidos = $data["apellidos"];
-        //     $correo = $data["correo"];
-        //     $password = $data["password"] ?? "";
-        //     $rol = $data["rol"];
-
-        //     $respuesta = UsuariosModel::editarUsuario(
-        //         $id,
-        //         $nombre,
-        //         $apellidos,
-        //         $correo,
-        //         $password,
-        //         $rol
-        //     );
-
-        //     if($respuesta){
-        //         echo json_encode([
-        //             "status" => 200,
-        //             "message" => "Cliente actualizado correctamente"
-        //         ]);
-        //     }else{
-        //         echo json_encode([
-        //             "status" => 500,
-        //             "message" => "No se pudo actualizar el cliente"
-        //         ]);
-        //     }
-        // }
+        
         public function editar($id){
             header('Content-Type: application/json');
 
@@ -220,5 +174,42 @@ require_once(__DIR__ . '/../../core/authApi.php');
             }
         }
         
+        public function status($id){
+            header('Content-Type: application/json');
+
+            $validar = AuthApi::validar();
+
+            $data = json_decode(file_get_contents("php://input"), true);
+
+            if (!$data) {
+                echo json_encode([
+                    "status" => 400,
+                    "error" => "Datos no enviados"
+                ]);
+                return;
+            }
+
+            $status = $data["status"];
+            
+            $updated_by= $_SESSION['id_usuario'];
+
+            $respuesta = UsuariosModel::status(
+                $id, $status, $updated_by
+            );
+
+            if($respuesta){
+                echo json_encode([
+                    "status" => 200,
+                    "message" => "Usuario actualizado correctamente"
+                ]);
+            }else{
+                echo json_encode([
+                    "status" => 500,
+                    "message" => "No se pudo actualizar el usuario"
+                ]);
+            }
+        }
+
+      
     }
 ?>

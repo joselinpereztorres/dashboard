@@ -100,5 +100,29 @@
             
         }
 
+
+        public static function status($id_usuario, $status, $updated_by){
+
+         $stmt = InstallModel::conexion()->prepare("UPDATE usuarios
+                SET status = :status,
+                    updated_at = NOW(),
+                    updated_by = :updated_by
+
+                WHERE id_usuario = :id_usuario");
+
+  
+        $stmt->bindValue(':id_usuario', $id_usuario);
+        $stmt->bindValue(':status', $status);
+        $stmt->bindValue(':updated_by', $updated_by);
+       
+        return $stmt->execute();
+
+
+    }
+
+ 
+
+
+
     }
 ?>

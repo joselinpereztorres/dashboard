@@ -36,7 +36,7 @@ if (!empty($_SESSION["flash"])) {
 	<script src="/public/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="/public/assets/plugins/sweetalert/sweetalert.min.js"></script>
     <script src="/public/assets/plugins/material-preloader/material-preloader.js"></script> 
-	<script src="//publicassets/plugins/toastr/toastr.min.js"></script>
+	<script src="/public/assets/plugins/toastr/toastr.min.js"></script>
     
     <link rel="stylesheet" href="/public/assets/css/root.css">
     <link rel="stylesheet" href="/public/assets/css/dashboard.css">
@@ -98,7 +98,7 @@ if (!empty($_SESSION["flash"])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/public/assets/js/dashboard.js"></script>
     <script src="/public/assets/js/login.js"></script>
-
+    <script type="module" src="/public/assets/js/modules.js"></script>
     
      
 

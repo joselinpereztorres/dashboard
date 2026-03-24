@@ -16,14 +16,7 @@
     </div>
 
     <div>
-        <div class="d-flex justify-content-end my-3">
-            <select class="form-select form-select-sm w-auto me-2">
-                <option selected>Filtro</option>
-                <option>Mas antiguo</option>
-                <option>Nuevo</option>
-
-            </select>
-        </div>
+     
 
         <div class="table-responsive">
             <table class="table align-middle table table-borderless">
