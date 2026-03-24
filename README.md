@@ -1,4 +1,5 @@
 # Sistema de Gestión de Muestras
+Sistema web desarrollado en PHP bajo arquitectura MVC, con base de datos MySQL y comunicación mediante una API REST interna. El frontend fue implementado con JavaScript (ES6) utilizando Fetch para peticiones asíncronas y Bootstrap para el diseño de la interfaz. Incluye operaciones CRUD, enrutamiento dinámico, manejo de roles y estructura modular siguiendo buenas prácticas de desarrollo backend.
 
 ## URL de acceso
 https://laboratorio.wensnails.com
